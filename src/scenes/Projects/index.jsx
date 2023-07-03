@@ -13,8 +13,8 @@ import "swiper/css/effect-fade";
 const projects = [
   {
     id: 0,
-    imageSrc: "./images/Project3.png",
-    projectName: "Cyberwares",
+    imageSrc: "./images/ProjectImage1.png",
+    projectName: "Cyberwares Storepage",
     projectDescription:
       "Cyberwares is a sleek e-commerce platform offering cutting-edge tech products. Powered by Next.js, it delivers a seamless shopping experience with responsive design. Secure payments are facilitated by Stripe integration. The admin site, built with Next.js, NextAuth, Tailwind CSS, and Chart.js, enables efficient product and category management. Explore and purchase the latest tech innovations with Cyberwares.",
     projectLink: "https://github.com/KKWChao/CyberwaresFrontend",
@@ -23,7 +23,23 @@ const projects = [
   },
   {
     id: 1,
-    imageSrc: "./images/Project2.png",
+    imageSrc: "./images/ProjectImage2.png",
+    projectName: "Cyberwares Admin",
+    projectDescription:
+      "Explore Cyberwares Admin, a web application designed for product management and administration. This site serves as the back-end administration panel for the Cyberwares e-commerce store. It provides a user-friendly interface to manage product inventory, categories, and other essential information. Experience efficient product management and seamless integration with the Cyberwares e-commerce platform.",
+    projectLink: "https://github.com/KKWChao/CyberwaresAdmin",
+    githubLink: "https://cyberwares-admin.vercel.app/",
+    technologies: [
+      "NextJS",
+      "Next Auth",
+      "MongoDB",
+      "TailwindCSS",
+      "Google Cloud API",
+    ],
+  },
+  {
+    id: 2,
+    imageSrc: "./images/ProjectImage4.png",
     projectName: "Youtube Clone",
     projectDescription:
       "Experience the YouTube Clone, a dynamic web application developed with React, JavaScript, and Material-UI (MUI). Explore a vast library of videos, search for your favorite content, and enjoy an immersive viewing experience. This clone emulates the popular video-sharing platform, providing a seamless interface for discovering and watching videos.",
@@ -34,8 +50,8 @@ const projects = [
   },
 
   {
-    id: 2,
-    imageSrc: "./images/Project1.png",
+    id: 3,
+    imageSrc: "./images/ProjectImage3.png",
     projectName: "EvoGym",
     projectDescription:
       "Discover EvoGym Demo, a sleek and interactive fitness website that showcases the features and capabilities of EvoGym. Explore various workout routines, browse fitness classes, and learn about personalized training programs. With its modern design and user-friendly interface, EvoGym Demo offers an immersive experience for fitness enthusiasts looking to achieve their health and wellness goals.",
@@ -44,8 +60,8 @@ const projects = [
     technologies: ["React", "TypeScript", "TailwindCSS"],
   },
   {
-    id: 3,
-    imageSrc: "./images/Project4.png",
+    id: 4,
+    imageSrc: "./images/ProjectImage5.png",
     projectName: "Sociopedia",
     projectDescription:
       "A social media site to show the world your personality. ",
