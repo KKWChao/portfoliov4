@@ -107,7 +107,7 @@ function Projects() {
               target="_blank"
               rel="noreferrer"
             >
-              <LaunchIcon fontSize="large" />
+              <GitHubIcon fontSize="large" />
             </a>
 
             <a
@@ -116,7 +116,7 @@ function Projects() {
               target="_blank"
               rel="noreferrer"
             >
-              <GitHubIcon fontSize="large" />
+              <LaunchIcon fontSize="large" />
             </a>
           </div>
         </div>
