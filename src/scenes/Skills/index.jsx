@@ -47,17 +47,18 @@ function Skills() {
     >
       <h1 className="text-5xl py-10 title mt-[3%]">Skills</h1>
       <div className="flex justify-center m-4">
-        <div className="grid grid-cols-2 md:gap-20 gap-3 text-3xl">
+        <div className="grid grid-cols-2 md:gap-10 gap-1">
           <h2 className="md:text-5xl text-2xl font-semibold">FrontEnd</h2>
           <h2 className="md:text-5xl text-2xl font-semibold">Backend</h2>
           <div>
             {skillList.frontEndSkills.map((item, idx) => (
               <motion.p
-                key={`${item}_${idx}_frontend`}
-                initial={{ x: -200, opacity: 0 }}
+                key={`frontend_${item}_${idx}`}
+                initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: idx, type: "spring" }}
+                className=""
               >
                 {item}
               </motion.p>
@@ -66,8 +67,8 @@ function Skills() {
           <div>
             {skillList.backEndSkills.map((item, idx) => (
               <motion.p
-                key={`${item}_${idx}_backend`}
-                initial={{ x: 200, opacity: 0 }}
+                key={`backend_${item}_${idx}`}
+                initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: idx, type: "spring" }}

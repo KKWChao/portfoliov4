@@ -159,7 +159,7 @@ function Projects() {
         resizeObserver={true}
         loop={true}
         modules={[EffectCoverflow, Autoplay, Pagination]}
-        className="md:mt-0 md:w-1/2 mt-[20%]"
+        className="md:mt-0 md:w-1/2"
       >
         {projects.map((item) => (
           <SwiperSlide key={`${item.projectName}_${item.id}`} className="">

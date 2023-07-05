@@ -7,7 +7,7 @@ function Home() {
       id="home"
       className="absolute text-white w-full text-center overflow-hidden top-0 flex justify-center align-middle flex-col"
     >
-      <div className="text-center md:mt-[25%] mt-[100%]">
+      <div className="text-center md:mt-[25%] mt-[70%]">
         <h1 className="title md:text-7xl text-3xl">
           Hi, My name is Kelvin Chao
         </h1>
