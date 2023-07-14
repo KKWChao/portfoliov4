@@ -13,7 +13,7 @@ function Home() {
         </h1>
         <h1 className="title pt-8 text-xl">Web Developer</h1>
       </div>
-
+      <h3 className="absolute bottom-14 w-full">Scroll Down for More Info!</h3>
       <motion.div
         className="text-center md:mt-[15%] mt-[90%]"
         initial={{ opacity: 1, y: -20 }}
