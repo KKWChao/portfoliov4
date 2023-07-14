@@ -17,8 +17,8 @@ const projects = [
     projectName: "Cyberwares Storepage",
     projectDescription:
       "Cyberwares is a sleek e-commerce platform offering cutting-edge tech products. Powered by Next.js, it delivers a seamless shopping experience with responsive design. Secure payments are facilitated by Stripe integration. The admin site, built with Next.js, NextAuth, Tailwind CSS, and Chart.js, enables efficient product and category management. Explore and purchase the latest tech innovations with Cyberwares.",
-    projectLink: "https://github.com/KKWChao/CyberwaresFrontend",
-    githubLink: "https://cyberwares-frontend.vercel.app/",
+    githubLink: "https://github.com/KKWChao/CyberwaresFrontend",
+    projectLink: "https://cyberwares-frontend.vercel.app/",
     technologies: ["NextJS", "MongoDB", "Node.js", "Stripe"],
   },
   {
@@ -27,8 +27,8 @@ const projects = [
     projectName: "Cyberwares Admin",
     projectDescription:
       "Explore Cyberwares Admin, a web application designed for product management and administration. This site serves as the back-end administration panel for the Cyberwares e-commerce store. It provides a user-friendly interface to manage product inventory, categories, and other essential information. Experience efficient product management and seamless integration with the Cyberwares e-commerce platform.",
-    projectLink: "https://github.com/KKWChao/CyberwaresAdmin",
-    githubLink: "https://cyberwares-admin.vercel.app/",
+    githubLink: "https://github.com/KKWChao/CyberwaresAdmin",
+    projectLink: "https://cyberwares-admin.vercel.app/",
     technologies: [
       "NextJS",
       "Next Auth",
@@ -43,8 +43,8 @@ const projects = [
     projectName: "Youtube Clone",
     projectDescription:
       "Experience the YouTube Clone, a dynamic web application developed with React, JavaScript, and Material-UI (MUI). Explore a vast library of videos, search for your favorite content, and enjoy an immersive viewing experience. This clone emulates the popular video-sharing platform, providing a seamless interface for discovering and watching videos.",
-    projectLink: "https://github.com/KKWChao/YoutubeClone",
-    githubLink:
+    githubLink: "https://github.com/KKWChao/YoutubeClone",
+    projectLink:
       "https://632a22c204beb617c6d1078a--meek-marzipan-6344b2.netlify.app/",
     technologies: ["React", "MUI", "API"],
   },
@@ -102,7 +102,7 @@ function Projects() {
 
           <div className="flex justify-around w-full md:my-5 align-middle">
             <a
-              href={projectLink}
+              href={githubLink}
               className="hover:bg-gray-500 px-2 py-1 rounded-md"
               target="_blank"
               rel="noreferrer"
@@ -111,7 +111,7 @@ function Projects() {
             </a>
 
             <a
-              href={githubLink}
+              href={projectLink}
               className="hover:bg-gray-500 px-2 py-1 rounded-md"
               target="_blank"
               rel="noreferrer"
