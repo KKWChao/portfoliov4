@@ -21,10 +21,11 @@ function Home() {
         transition={{
           duration: 1,
           repeat: Infinity,
-          repeatDelay: 0.5,
+          repeatDelay: 1,
+          ease: 1,
         }}
       >
-        <ArrowCircleDownIcon className="drop-shadow-lg" fontSize="large" />
+        <ArrowCircleDownIcon className="drop-shadow-lg p-1" fontSize="large" />
       </motion.div>
     </section>
   );

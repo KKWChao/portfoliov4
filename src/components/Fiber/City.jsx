@@ -73,9 +73,9 @@ function City() {
         />
       </mesh>
       <gridHelper args={[50, 50, 0xff0000, 0x000000]} />
-      <mesh position={[0, 10, 0]}>
+      {/* <mesh position={[0, 10, 0]}>
         <Cloud opacity={0.3} width={20} depth={2} segments={40} />
-      </mesh>
+      </mesh> */}
     </>
   );
 }
