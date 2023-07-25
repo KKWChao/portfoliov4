@@ -19,6 +19,7 @@ import Lighting from "@/components/Fiber/Lighting";
 import MainCity from "@/components/Fiber/MainCity";
 import TestSquare from "@/components/Fiber/TestSquare";
 // import Navbar from "@/components/Navbar";
+import Footer from "./components/Footer";
 import Home from "@/scenes/Home";
 
 function App() {
@@ -38,17 +39,17 @@ function App() {
     <ScrollControls pages={5.5} damping={0.1}>
       <Lighting />
       <Scroll>
-        <MainCity />
+        {/* <MainCity /> */}
         <StarsAnimated />
-        <SoftShadows />
+        {/* <SoftShadows /> */}
         {/* page items */}
-        <Sparkles
+        {/* <Sparkles
           position={[0, -height * 1.4, 0]}
           scale={15}
           size={10}
           noise={3}
-        />
-        <TestSquare position={[0, -height * 1.4, 0]} />
+        /> */}
+        {/* <TestSquare position={[0, -height * 1.4, 0]} /> */}
       </Scroll>
 
       <Scroll html className="w-full" id="pages">
@@ -59,6 +60,7 @@ function App() {
         <Projects />
         <Skills />
         <Contact />
+        {/* <Footer /> */}
       </Scroll>
     </ScrollControls>
   );

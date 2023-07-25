@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import Section from "../../components/Reusable/Section";
 
 function About() {
   return (
-    <section
+    <Section
       id="about"
       className="absolute text-white top-[150vh] w-full text-center overflow-hidden "
     >
@@ -53,7 +54,7 @@ function About() {
           </p>
         </motion.div>
       </div>
-    </section>
+    </Section>
   );
 }
 

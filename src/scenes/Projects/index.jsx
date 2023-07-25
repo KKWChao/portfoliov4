@@ -9,6 +9,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import Section from "../../components/Reusable/Section";
 
 const projects = [
   {
@@ -134,10 +135,7 @@ function Projects() {
   };
 
   return (
-    <section
-      id="projects"
-      className="absolute text-white top-[250vh] w-full text-center overflow-hidden"
-    >
+    <Section id="projects" className="">
       <h1 className="text-5xl pt-5 title">Projects</h1>
 
       <Swiper
@@ -175,7 +173,7 @@ function Projects() {
         ))}
       </Swiper>
       <p className="text-sm mt-3">Swipe or drag the items...</p>
-    </section>
+    </Section>
   );
 }
 

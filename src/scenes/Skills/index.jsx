@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Section from "../../components/Reusable/Section";
 
 const skillList = {
   frontEndSkills: [
@@ -41,10 +42,7 @@ const skillList = {
 
 function Skills() {
   return (
-    <section
-      id="skills"
-      className="absolute text-white top-[350vh] w-full text-center"
-    >
+    <Section id="skills" className="">
       <h1 className="text-5xl py-10 title mt-[3%]">Skills</h1>
       <div className="flex justify-center m-4">
         <div className="grid grid-cols-2 md:gap-10 gap-1">
@@ -95,7 +93,7 @@ function Skills() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

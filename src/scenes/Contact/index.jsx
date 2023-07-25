@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import Section from "../../components/Reusable/Section";
 
 function Contact() {
   const formStyle = "md:w-1/3 p-5 rounded-md opacity-90 text-black w-full";
@@ -16,10 +17,7 @@ function Contact() {
     }
   };
   return (
-    <section
-      id="contact"
-      className="absolute text-white top-[450vh] w-full text-center"
-    >
+    <Section id="contact" className="">
       <h1 className="text-5xl py-10 title mt-[10%]">Contact Me</h1>
       <motion.div className="px-2 md:mt-[10%] mt-[20%]">
         <form
@@ -92,7 +90,7 @@ function Contact() {
           </button>
         </form>
       </motion.div>
-    </section>
+    </Section>
   );
 }
 
