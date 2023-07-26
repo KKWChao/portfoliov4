@@ -4,7 +4,10 @@ import {
   SoftShadows,
   Sparkles,
 } from "@react-three/drei";
-import { useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
+import { Loader } from "@react-three/drei";
+import { useEffect, useState } from "react";
 import { useThree } from "@react-three/fiber";
 import baffle from "baffle";
 
@@ -18,12 +21,14 @@ import StarsAnimated from "@/components/Fiber/StarsAnimated";
 import Lighting from "@/components/Fiber/Lighting";
 import MainCity from "@/components/Fiber/MainCity";
 import TestSquare from "@/components/Fiber/TestSquare";
-// import Navbar from "@/components/Navbar";
 import Footer from "./components/Footer";
 import Home from "@/scenes/Home";
+import ScrollManager from "./components/Reusable/ScrollManager";
+import Menu from "./components/Menu";
 
 function App() {
-  const { height } = useThree((state) => state.viewport);
+  const [section, setSection] = useState(0);
+  const [menuOpened, setMenuOpened] = useState(false);
 
   useEffect(() => {
     const target = baffle(".title");
@@ -36,33 +41,54 @@ function App() {
   }, []);
 
   return (
-    <ScrollControls pages={5.5} damping={0.1}>
-      <Lighting />
-      <Scroll>
-        {/* <MainCity /> */}
-        <StarsAnimated />
-        {/* <SoftShadows /> */}
-        {/* page items */}
-        {/* <Sparkles
+    <>
+      <Canvas
+        shadows
+        id="canvas"
+        color={"#000000"}
+        style={{ position: "fixed" }}
+        camera={{ position: [20, 10, 10], fov: 45 }}
+      >
+        <color attach="background" args={["#000000"]} />
+        <Suspense fallback={null}>
+          <ScrollControls pages={5} damping={0.1}>
+            <Lighting />
+            <StarsAnimated />
+            <Scroll>
+              {/* <MainCity /> */}
+
+              {/* <SoftShadows /> */}
+              {/* page items */}
+              {/* <Sparkles
           position={[0, -height * 1.4, 0]}
           scale={15}
           size={10}
           noise={3}
         /> */}
-        {/* <TestSquare position={[0, -height * 1.4, 0]} /> */}
-      </Scroll>
+              {/* <TestSquare position={[0, -height * 1.4, 0]} /> */}
+            </Scroll>
 
-      <Scroll html className="w-full" id="pages">
-        {/* maybe add sticky nav with mobile hamburger? */}
-        {/* <Navbar />  */}
-        <Home />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
-        {/* <Footer /> */}
-      </Scroll>
-    </ScrollControls>
+            <Scroll html id="pages">
+              <ScrollManager section={section} onSectionChange={setSection} />
+              {/* maybe add sticky nav with mobile hamburger? */}
+              {/* <Navbar />  */}
+              <Home />
+              <About />
+              <Projects />
+              <Skills />
+              <Contact />
+              {/* <Footer /> */}
+            </Scroll>
+          </ScrollControls>
+        </Suspense>
+        <Loader />
+      </Canvas>
+      <Menu
+        onSectionChange={setSection}
+        menuOpen={menuOpened}
+        setMenuOpened={setMenuOpened}
+      />
+    </>
   );
 }
 

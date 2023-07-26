@@ -43,7 +43,7 @@ const skillList = {
 function Skills() {
   return (
     <Section id="skills" className="">
-      <h1 className="text-5xl py-10 title mt-[3%]">Skills</h1>
+      <h1 className="text-5xl py-10 title">Skills</h1>
       <div className="flex justify-center m-4">
         <div className="grid grid-cols-2 md:gap-10 gap-1">
           <h2 className="md:text-5xl text-2xl font-semibold">FrontEnd</h2>

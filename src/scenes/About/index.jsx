@@ -3,13 +3,10 @@ import Section from "../../components/Reusable/Section";
 
 function About() {
   return (
-    <Section
-      id="about"
-      className="absolute text-white top-[150vh] w-full text-center overflow-hidden "
-    >
-      <div className="overflow-hidden mx-auto md:h-[90%] ">
+    <Section id="about" className="">
+      <div className="overflow-hidden mx-auto">
         <motion.h1
-          className="text-5xl title mt-[5%]"
+          className="text-5xl title"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -24,7 +21,7 @@ function About() {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 3 }}
         >
-          <p className="lg:text-2xl lg:w-1/2 text-sm md:px-10 px-2 md:text-2xl md:w-3/4 mt-[5%]">
+          <p className="lg:text-2xl lg:w-1/2 text-sm md:px-10 px-2 md:text-2xl md:w-3/4 mt-10">
             I am an experienced web developer with a strong background in
             building websites and projects. With a focus on JavaScript,
             HTML/CSS, and Bootstrap, I am dedicated to creating exceptional user

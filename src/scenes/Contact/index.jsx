@@ -18,8 +18,8 @@ function Contact() {
   };
   return (
     <Section id="contact" className="">
-      <h1 className="text-5xl py-10 title mt-[10%]">Contact Me</h1>
-      <motion.div className="px-2 md:mt-[10%] mt-[20%]">
+      <h1 className="text-5xl py-10 title">Contact Me</h1>
+      <motion.div className="px-2">
         <form
           className="flex flex-col items-center gap-10"
           target="_blank"

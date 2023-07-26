@@ -82,7 +82,7 @@ function Projects() {
     technologies,
   }) => {
     return (
-      <div className="overflow-hidden rounded-lg text-white border-4 border-white md:m-20 m-2 px-2 flex flex-col justify-center items-center bg-black">
+      <div className="rounded-lg text-white border-4 border-white md:m-20 m-2 px-2 flex flex-col justify-center items-center bg-black">
         <h1 className="py-5 md:text-3xl">{projectName}</h1>
         <div className="w-full md:w-3/4 ">
           <img src={imageSrc} alt={projectName} className="rounded-md" />
@@ -135,7 +135,7 @@ function Projects() {
   };
 
   return (
-    <Section id="projects" className="">
+    <Section id="projects">
       <h1 className="text-5xl pt-5 title">Projects</h1>
 
       <Swiper
@@ -157,7 +157,7 @@ function Projects() {
         resizeObserver={true}
         loop={true}
         modules={[EffectCoverflow, Autoplay, Pagination]}
-        className="md:mt-0 md:w-1/2"
+        className="md:w-1/2"
       >
         {projects.map((item) => (
           <SwiperSlide key={`${item.projectName}_${item.id}`} className="">
