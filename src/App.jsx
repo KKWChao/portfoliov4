@@ -31,6 +31,10 @@ function App() {
   const [menuOpened, setMenuOpened] = useState(false);
 
   useEffect(() => {
+    setMenuOpened(false);
+  }, [section]);
+
+  useEffect(() => {
     const target = baffle(".title");
     target.set({
       characters: "░▒▓░▒▓░▒▓░▒▓░▒",
@@ -86,7 +90,7 @@ function App() {
       <Menu
         onSectionChange={setSection}
         menuOpen={menuOpened}
-        setMenuOpened={setMenuOpened}
+        setMenuOpen={setMenuOpened}
       />
     </>
   );
