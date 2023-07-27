@@ -44,7 +44,6 @@ function ScrollManager(props) {
     }
   });
   lastScroll.current = data.scroll.current;
-  return null;
 }
 
 export default ScrollManager;

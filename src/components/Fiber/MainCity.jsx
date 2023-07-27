@@ -3,14 +3,15 @@ import City from "./City";
 import AnimatedPoints from "./AnimatedPoints";
 import { useFrame } from "@react-three/fiber";
 
-function MainCity() {
+function MainCity(props) {
+  const { position } = props;
   const cityRef = useRef();
 
   useFrame(({ clock }) => {
     cityRef.current.rotation.y = clock.getElapsedTime() / 6;
   });
   return (
-    <group ref={cityRef}>
+    <group ref={cityRef} position={position}>
       <City />
       <AnimatedPoints horizontal={true} invert={true} />
       <AnimatedPoints horizontal={true} invert={false} />

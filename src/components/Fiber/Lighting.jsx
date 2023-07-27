@@ -3,12 +3,12 @@ import { Shadow } from "@react-three/drei";
 function Lighting() {
   return (
     <>
-      <directionalLight intensity={4} color={"red"} position={[30, 10, 20]}>
+      {/* <directionalLight intensity={4} color={"red"} position={[30, 10, 20]}>
         <perspectiveCamera attach="shadow-camera" />
       </directionalLight>
       <directionalLight intensity={4} color={"blue"} position={[-30, 10, -20]}>
         <perspectiveCamera attach="shadow-camera" />
-      </directionalLight>
+      </directionalLight> */}
 
       <directionalLight
         position={[20, 10, 20]}

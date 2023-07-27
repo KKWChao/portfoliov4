@@ -58,23 +58,16 @@ function App() {
             <Lighting />
             <StarsAnimated />
             <Scroll>
-              {/* <MainCity /> */}
-
               {/* <SoftShadows /> */}
               {/* page items */}
-              {/* <Sparkles
-          position={[0, -height * 1.4, 0]}
-          scale={15}
-          size={10}
-          noise={3}
-        /> */}
-              {/* <TestSquare position={[0, -height * 1.4, 0]} /> */}
+              <Sparkles position={[0, 0, 0]} scale={15} size={10} noise={3} />
+
+              <TestSquare position={[0, 0, 0]} />
+              <MainCity position={[0, -80, 0]} />
             </Scroll>
 
             <Scroll html id="pages">
               <ScrollManager section={section} onSectionChange={setSection} />
-              {/* maybe add sticky nav with mobile hamburger? */}
-              {/* <Navbar />  */}
               <Home />
               <About />
               <Projects />
