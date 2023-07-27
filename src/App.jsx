@@ -21,7 +21,6 @@ import StarsAnimated from "@/components/Fiber/StarsAnimated";
 import Lighting from "@/components/Fiber/Lighting";
 import MainCity from "@/components/Fiber/MainCity";
 import TestSquare from "@/components/Fiber/TestSquare";
-import Footer from "./components/Footer";
 import Home from "@/scenes/Home";
 import ScrollManager from "./components/Reusable/ScrollManager";
 import Menu from "./components/Menu";
@@ -81,7 +80,6 @@ function App() {
               <Projects />
               <Skills />
               <Contact />
-              {/* <Footer /> */}
             </Scroll>
           </ScrollControls>
         </Suspense>
