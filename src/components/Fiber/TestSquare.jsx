@@ -2,7 +2,7 @@ import { RoundedBox } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 
-function TestSquare({ ...props }) {
+function TestSquare(props) {
   const boxRef = useRef();
 
   useFrame(() => {
@@ -12,7 +12,7 @@ function TestSquare({ ...props }) {
   });
 
   return (
-    <mesh position={props.position} ref={boxRef}>
+    <mesh {...props} ref={boxRef}>
       <RoundedBox
         args={[10, 10, 10]}
         radius={0.5}

@@ -65,7 +65,7 @@ function Menu(props) {
               <GitHubIcon className="m-4 scale-150 " />
             </a>
             <img
-              src="./images/009-astronaut-8-alt.png"
+              src="./assets/images/009-astronaut-8-alt.png"
               alt="KelvinChaoImg"
               className="w-14"
             />

@@ -1,5 +1,4 @@
 import { DoubleSide } from "three";
-import { Cloud } from "@react-three/drei";
 
 function City() {
   const innerMin = 0;
@@ -21,9 +20,14 @@ function City() {
       (Math.random() < 0.5 ? -1 : 1);
 
     const box = (
-      <mesh castShadow position={[innerX, innerY / 2, innerZ]} key={i + "box"}>
+      <mesh
+        castShadow
+        receiveShadow
+        position={[innerX, innerY / 2, innerZ]}
+        key={i + "box"}
+      >
         <boxGeometry args={[0.9, innerY, 0.9]} />
-        <meshPhongMaterial color={0x808080} metalness={1} roughness={1} />
+        <meshPhongMaterial color={0x131313} metalness={1} roughness={1} />
       </mesh>
     );
 
@@ -53,7 +57,7 @@ function City() {
         receiveShadow
       >
         <boxGeometry args={[0.8, outerY, 0.8]} />
-        <meshPhongMaterial color={0x808080} side={DoubleSide} />
+        <meshPhongMaterial color={0x131313} side={DoubleSide} />
       </mesh>
     );
 
@@ -64,18 +68,16 @@ function City() {
     <>
       {outerBoxes}
       {innerBoxes}
-      <mesh receiveShadow position={[0, -0.5, 0]}>
+      <fog attach="fog" color={0x000000} near={10} far={25} />
+      <mesh castShadow receiveShadow position={[0, -0.5, 0]}>
         <boxGeometry args={[50, 0.1, 50]} attach="geometry" />
         <meshLambertMaterial
-          color={0x46494d}
+          color={0x202020}
           side={DoubleSide}
           attach="material"
         />
       </mesh>
       <gridHelper args={[50, 50, 0xff0000, 0x000000]} />
-      {/* <mesh position={[0, 10, 0]}>
-        <Cloud opacity={0.3} width={20} depth={2} segments={40} />
-      </mesh> */}
     </>
   );
 }

@@ -17,14 +17,14 @@ import Contact from "@/scenes/Contact";
 import Skills from "@/scenes/Skills";
 
 import StarsAnimated from "@/components/Fiber/StarsAnimated";
-
 import Lighting from "@/components/Fiber/Lighting";
 import MainCity from "@/components/Fiber/MainCity";
 import TestSquare from "@/components/Fiber/TestSquare";
 import Home from "@/scenes/Home";
 import ScrollManager from "./components/Reusable/ScrollManager";
 import Menu from "./components/Menu";
-
+import Planets from "./components/Fiber/Planets";
+import { ISSModel } from "./components/Fiber/ISSModel";
 function App() {
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
@@ -45,25 +45,25 @@ function App() {
 
   return (
     <>
-      <Canvas
-        shadows
-        id="canvas"
-        color={"#000000"}
-        style={{ position: "fixed" }}
-        camera={{ position: [20, 10, 10], fov: 45 }}
-      >
-        <color attach="background" args={["#000000"]} />
-        <Suspense fallback={null}>
+      <Suspense fallback={null}>
+        <Canvas
+          id="canvas"
+          style={{ position: "fixed" }}
+          shadowMap
+          colorManagement
+        >
+          <color attach="background" args={["#000000"]} />
           <ScrollControls pages={5} damping={0.1}>
             <Lighting />
             <StarsAnimated />
             <Scroll>
               {/* <SoftShadows /> */}
               {/* page items */}
-              <Sparkles position={[0, 0, 0]} scale={15} size={10} noise={3} />
-
-              <TestSquare position={[0, 0, 0]} />
-              <MainCity position={[0, -80, 0]} />
+              {/* <Sparkles position={[0, 0, 0]} scale={15} size={10} noise={3} /> */}
+              {/* <TestSquare position={[0, 0, 0]} /> */}
+              <ISSModel scale={0.05} position={[0, 0, 0]} />
+              <Planets position={[0, -8, 0]} />
+              {/* <MainCity position={[0, -80, 0]} /> */}
             </Scroll>
 
             <Scroll html id="pages">
@@ -75,9 +75,9 @@ function App() {
               <Contact />
             </Scroll>
           </ScrollControls>
-        </Suspense>
-        <Loader />
-      </Canvas>
+        </Canvas>
+      </Suspense>
+      <Loader />
       <Menu
         onSectionChange={setSection}
         menuOpen={menuOpened}
