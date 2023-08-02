@@ -7,8 +7,8 @@ export function ISSModel(props) {
   const modelRef = useRef();
 
   useFrame(() => {
-    modelRef.current.rotation.y += 0.0005;
-    modelRef.current.rotation.z += 0.0005;
+    modelRef.current.rotation.y -= 0.0005;
+    modelRef.current.rotation.z -= 0.0005;
   });
   return (
     <group {...props} dispose={null} ref={modelRef}>

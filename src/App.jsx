@@ -1,4 +1,5 @@
 import {
+  PerspectiveCamera,
   Scroll,
   ScrollControls,
   SoftShadows,
@@ -19,7 +20,6 @@ import Skills from "@/scenes/Skills";
 import StarsAnimated from "@/components/Fiber/StarsAnimated";
 import Lighting from "@/components/Fiber/Lighting";
 import MainCity from "@/components/Fiber/MainCity";
-import TestSquare from "@/components/Fiber/TestSquare";
 import Home from "@/scenes/Home";
 import ScrollManager from "./components/Reusable/ScrollManager";
 import Menu from "./components/Menu";
@@ -53,6 +53,7 @@ function App() {
           colorManagement
         >
           <color attach="background" args={["#000000"]} />
+
           <ScrollControls pages={5} damping={0.1}>
             <Lighting />
             <StarsAnimated />
@@ -61,8 +62,9 @@ function App() {
               {/* page items */}
               {/* <Sparkles position={[0, 0, 0]} scale={15} size={10} noise={3} /> */}
               {/* <TestSquare position={[0, 0, 0]} /> */}
-              <ISSModel scale={0.05} position={[0, 0, 0]} />
-              <Planets position={[0, -8, 0]} />
+              <Planets position={[0, 0, 0]} />
+              <ISSModel scale={0.05} position={[0, -8, 0]} />
+
               {/* <MainCity position={[0, -80, 0]} /> */}
             </Scroll>
 
