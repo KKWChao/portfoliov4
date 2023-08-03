@@ -25,6 +25,7 @@ import ScrollManager from "./components/Reusable/ScrollManager";
 import Menu from "./components/Menu";
 import Planets from "./components/Fiber/Planets";
 import { ISSModel } from "./components/Fiber/ISSModel";
+import SkillsOrbit from "./components/Fiber/SkillsOrbit";
 function App() {
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
@@ -64,6 +65,7 @@ function App() {
               {/* <TestSquare position={[0, 0, 0]} /> */}
               <Planets position={[0, 0, 0]} />
               <ISSModel scale={0.05} position={[0, -8, 0]} />
+              <SkillsOrbit position={[0, -23, 0]} />
 
               {/* <MainCity position={[0, -80, 0]} /> */}
             </Scroll>

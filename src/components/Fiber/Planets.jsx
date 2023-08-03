@@ -21,7 +21,7 @@ function Planets(props) {
     "/assets/mesh/2k_neptune.jpg",
   ]);
   return (
-    <group {...props} rotation={[Math.PI / 10, 0, 0]} scale={1}>
+    <group {...props} rotation={[Math.PI / 8, 0, 0]} scale={1}>
       <Sun size={1} rotation={0.0003} />
       <Planet
         texture={mercuryTexture}
@@ -78,8 +78,6 @@ function Planets(props) {
     </group>
   );
 }
-
-export default Planets;
 
 /* SUN */
 function Sun(props) {
@@ -181,3 +179,5 @@ function Planet(props) {
     </mesh>
   );
 }
+
+export default Planets;
