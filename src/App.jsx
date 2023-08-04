@@ -1,16 +1,8 @@
-import {
-  PerspectiveCamera,
-  Scroll,
-  ScrollControls,
-  SoftShadows,
-  Sparkles,
-} from "@react-three/drei";
+import { Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Loader } from "@react-three/drei";
 import { useEffect, useState } from "react";
-import { useThree } from "@react-three/fiber";
-import baffle from "baffle";
 
 import About from "@/scenes/About";
 import Projects from "@/scenes/Projects";
@@ -34,25 +26,10 @@ function App() {
     setMenuOpened(false);
   }, [section]);
 
-  useEffect(() => {
-    const target = baffle(".title");
-    target.set({
-      characters: "░▒▓░▒▓░▒▓░▒▓░▒",
-      speed: 100,
-    });
-    target.start();
-    target.reveal(2000, 1000);
-  }, []);
-
   return (
     <>
       <Suspense fallback={null}>
-        <Canvas
-          id="canvas"
-          style={{ position: "fixed" }}
-          shadowMap
-          colorManagement
-        >
+        <Canvas id="canvas" style={{ position: "fixed" }}>
           <color attach="background" args={["#000000"]} />
 
           <ScrollControls pages={5} damping={0.1}>
@@ -64,7 +41,10 @@ function App() {
               {/* <Sparkles position={[0, 0, 0]} scale={15} size={10} noise={3} /> */}
               {/* <TestSquare position={[0, 0, 0]} /> */}
               <Planets position={[0, 0, 0]} />
-              <ISSModel scale={0.05} position={[0, -8, 0]} />
+              <Suspense fallback={null} r3f>
+                {/* <ISSModel scale={0.05} position={[0, -8, 0]} /> */}
+              </Suspense>
+
               <SkillsOrbit position={[0, -23, 0]} />
 
               {/* <MainCity position={[0, -80, 0]} /> */}

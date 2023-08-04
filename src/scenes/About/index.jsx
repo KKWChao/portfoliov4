@@ -21,7 +21,7 @@ function About() {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 3 }}
         >
-          <p className="lg:text-2xl lg:w-1/2 text-sm md:px-10 px-2 md:text-2xl md:w-3/4 mt-10">
+          <p className="lg:text-2xl lg:w-1/2 text-md md:px-10 px-2 md:text-2xl md:w-3/4 mt-10 bg-black rounded-lg bg-opacity-60 hover:opacity-20 ease-in-out duration-300">
             I am an experienced web developer with a strong background in
             building websites and projects. With a focus on JavaScript,
             HTML/CSS, and Bootstrap, I am dedicated to creating exceptional user

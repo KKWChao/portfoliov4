@@ -5,9 +5,10 @@ function Lighting() {
       <directionalLight
         position={[0, 0, 1]}
         castShadow
-        shadow-mapSize-height={512}
-        shadow-mapSize-width={512}
-      />
+        shadow-mapSize={[1024, 1024]}
+      >
+        <orthographicCamera attach="shadow-camera" args={[-10, 10, 10, -10]} />
+      </directionalLight>
     </>
   );
 }
