@@ -8,13 +8,10 @@ const skillList = {
     "Typescript",
     "React",
     "NextJS",
-    "JQuery",
     "Three.js",
-    "Bootstrap",
     "MUI",
     "TailwindCss",
     "SASS",
-    "JQuery",
   ],
   backEndSkills: [
     "MongoDB",
@@ -25,18 +22,6 @@ const skillList = {
     "Mongoose",
     "Node.js",
     "GraphQL",
-    "Python",
-    "Django",
-  ],
-  tools: [
-    "Three.js / React Three Fiber",
-    "Framer Motion",
-    "Vite",
-    "Axios",
-    "JWT",
-    "Helmet",
-    "Formik",
-    "GSAP",
   ],
 };
 
@@ -56,7 +41,7 @@ function Skills() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: idx, type: "spring" }}
-                className=""
+                className="text-2xl"
               >
                 {item}
               </motion.p>
@@ -70,6 +55,7 @@ function Skills() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: idx, type: "spring" }}
+                className="text-2xl"
               >
                 {item}
               </motion.p>
@@ -77,7 +63,7 @@ function Skills() {
           </div>
         </div>
       </div>
-      <div className="md:mt-20">
+      {/* <div className="md:mt-20">
         <h2 className="text-3xl font-semibold p-2">Tools</h2>
         <div className="flex justify-center md:gap-10 gap-0 md:flex-row flex-col">
           {skillList.tools.map((item, idx) => (
@@ -92,7 +78,7 @@ function Skills() {
             </motion.p>
           ))}
         </div>
-      </div>
+      </div> */}
     </Section>
   );
 }

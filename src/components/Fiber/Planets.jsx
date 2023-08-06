@@ -12,13 +12,13 @@ function Planets(props) {
     uranusTexture,
     neptuneTexture,
   ] = useTexture([
-    "/assets/mesh/2k_mercury.jpg",
-    "/assets/mesh/2k_venus.jpg",
-    "/assets/mesh/2k_mars.jpg",
-    "/assets/mesh/2k_jupiter.jpg",
-    "/assets/mesh/2k_saturn.jpg",
-    "/assets/mesh/2k_uranus.jpg",
-    "/assets/mesh/2k_neptune.jpg",
+    "/src/assets/meshes/planetMesh/2k_mercury.jpg",
+    "/src/assets/meshes/planetMesh/2k_venus.jpg",
+    "/src/assets/meshes/planetMesh/2k_mars.jpg",
+    "/src/assets/meshes/planetMesh/2k_jupiter.jpg",
+    "/src/assets/meshes/planetMesh/2k_saturn.jpg",
+    "/src/assets/meshes/planetMesh/2k_uranus.jpg",
+    "/src/assets/meshes/planetMesh/2k_neptune.jpg",
   ]);
   return (
     <group {...props} rotation={[Math.PI / 8, 0, 0]} scale={1}>
@@ -81,7 +81,7 @@ function Planets(props) {
 
 /* SUN */
 function Sun(props) {
-  const [sunTexture] = useTexture(["/assets/mesh/2k_sun.jpg"]);
+  const [sunTexture] = useTexture(["/src/assets/meshes/planetMesh/2k_sun.jpg"]);
   const sunRef = useRef();
 
   useFrame(() => {
@@ -90,7 +90,7 @@ function Sun(props) {
 
   return (
     <mesh ref={sunRef}>
-      <sphereGeometry args={[props.size]} />
+      <sphereGeometry args={[props.size, 64, 64]} />
       <meshPhongMaterial
         map={sunTexture}
         emissive={0xffffff}
@@ -109,11 +109,11 @@ function Earth(props) {
     earthDisplacementMap,
     moonTexture,
   ] = useTexture([
-    "/assets/mesh/2k_earth_daymap.jpg",
-    "/assets/mesh/earth_normal.jpg",
-    "/assets/mesh/earth_specular.jpg",
-    "/assets/mesh/earth_displacement.jpg",
-    "/assets/mesh/2k_moon.jpg",
+    "/src/assets/meshes/earthMoonMesh/2k_earth_daymap.jpg",
+    "/src/assets/meshes/earthMoonMesh/earth_normal.jpg",
+    "/src/assets/meshes/earthMoonMesh/earth_specular.jpg",
+    "/src/assets/meshes/earthMoonMesh/earth_displacement.jpg",
+    "/src/assets/meshes/earthMoonMesh/2k_moon.jpg",
   ]);
   const earthRef = useRef();
   const moonRef = useRef();
