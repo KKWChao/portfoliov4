@@ -14,7 +14,6 @@ function HomeBox({ ...props }) {
   return (
     <group {...props} position={[0, 0, 3]} ref={sphereRef}>
       <mesh>
-        {/* <boxGeometry args={[props.width, props.height, props.depth]} /> */}
         <sphereGeometry args={[4, 64, 64]} />
         <meshStandardMaterial map={map} side={THREE.BackSide} />
       </mesh>

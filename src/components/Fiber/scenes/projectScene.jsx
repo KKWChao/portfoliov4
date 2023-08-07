@@ -1,4 +1,4 @@
-import { Image, Text } from "@react-three/drei";
+import { GradientTexture, Image, Text } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { animate, useMotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
@@ -114,7 +114,9 @@ function Project(props) {
     <group {...props}>
       <mesh position-z={-0.03} ref={background}>
         <planeGeometry args={[3, 5]} />
-        <meshBasicMaterial color={"gray"} transparent opacity={0.9} />
+        <meshBasicMaterial transparent opacity={0.9}>
+          <GradientTexture stops={[0, 1]} colors={["white", "gray"]} />
+        </meshBasicMaterial>
       </mesh>
       <Image
         scale={[2.9, 2.1, 0.1]}
@@ -131,6 +133,7 @@ function Project(props) {
         anchorY={"top"}
         fontSize={0.3}
         position={[-1.2, 0.1, -0.01]}
+        font="Chakra+Petch"
       >
         {project.projectName.toUpperCase()}
       </Text>
@@ -146,9 +149,8 @@ function Project(props) {
       <Image
         maxWidth={1}
         anchorY={"bottom"}
-        fontSize={0.15}
         url={"/src/assets/images/icons8-site-100.png"}
-        scale={0.3}
+        scale={0.25}
         transparent
         position={[0.5, -2.25, 0.01]}
         onClick={() => window.open(project.projectLink)}
@@ -158,9 +160,8 @@ function Project(props) {
       <Image
         maxWidth={1}
         anchorY={"bottom"}
-        fontSize={0.15}
         url={"/src/assets/images/github-mark-white.png"}
-        scale={0.3}
+        scale={0.25}
         transparent
         position={[-0.5, -2.25, 0.01]}
         onClick={() => window.open(project.githubLink)}

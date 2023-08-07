@@ -30,34 +30,35 @@ function App() {
 
   return (
     <>
-      <Suspense fallback={<Loader />}>
-        <Canvas id="canvas" style={{ position: "fixed" }}>
-          <color attach="background" args={["#000000"]} />
-          <ScrollControls pages={5} damping={0.1}>
-            <Lighting />
-            <StarsAnimated />
-            {/* <OrbitControls /> */}
+      <Canvas id="canvas" style={{ position: "fixed" }}>
+        <color attach="background" args={["#000000"]} />
 
-            <Scroll>
-              {/* page items */}
-              <HomeBox />
-              <AboutScene />
-              <ProjectScene />
-              <SkillScene />
-            </Scroll>
+        <ScrollControls pages={5} damping={0.1}>
+          <Lighting />
+          <StarsAnimated />
+          {/* <OrbitControls /> */}
 
-            <Scroll html id="pages">
-              <ScrollManager section={section} onSectionChange={setSection} />
-              <Home />
-              <About />
-              <Projects />
-              <Skills />
-              <Contact />
-            </Scroll>
-          </ScrollControls>
-        </Canvas>
-      </Suspense>
-      <Loader />
+          <Scroll>
+            {/* page items */}
+
+            <HomeBox />
+            <AboutScene />
+            <ProjectScene />
+            <SkillScene />
+          </Scroll>
+
+          <Scroll html id="pages">
+            <Loader />
+            <ScrollManager section={section} onSectionChange={setSection} />
+            <Home />
+            <About />
+            <Projects />
+            <Skills />
+            <Contact />
+          </Scroll>
+        </ScrollControls>
+      </Canvas>
+
       <Menu
         onSectionChange={setSection}
         menuOpen={menuOpened}
