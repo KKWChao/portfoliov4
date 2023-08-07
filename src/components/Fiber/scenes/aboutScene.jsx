@@ -1,8 +1,10 @@
 import { useTexture } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 
-function Planets(props) {
+function AboutScene(props) {
+  const { viewport } = useThree();
+
   const [
     mercuryTexture,
     venusTexture,
@@ -21,7 +23,11 @@ function Planets(props) {
     "/src/assets/meshes/planetMesh/2k_neptune.jpg",
   ]);
   return (
-    <group {...props} rotation={[Math.PI / 8, 0, 0]} scale={1}>
+    <group
+      position-y={-viewport.height * 1}
+      rotation={[Math.PI / 8, 0, 0]}
+      scale={1}
+    >
       <Sun size={1} rotation={0.0003} />
       <Planet
         texture={mercuryTexture}
@@ -180,4 +186,4 @@ function Planet(props) {
   );
 }
 
-export default Planets;
+export default AboutScene;

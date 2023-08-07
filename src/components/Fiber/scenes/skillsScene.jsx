@@ -1,8 +1,10 @@
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 
-function SkillsOrbit(props) {
+function SkillScene(props) {
+  const { viewport } = useThree();
+
   const frontRef = useRef();
   const backRef = useRef();
   const toolRef = useRef();
@@ -85,13 +87,9 @@ function SkillsOrbit(props) {
     sphereRef.current.rotation.z = clock.getElapsedTime() * -0.05;
   });
   return (
-    <>
+    <group position-y={-viewport.height * 3}>
       {/* Outer Orbit */}
-      <group
-        {...props}
-        ref={backRef}
-        rotation={[Math.PI / 3, Math.PI / 3, Math.PI / 6]}
-      >
+      <group ref={backRef} rotation={[Math.PI / 3, Math.PI / 3, Math.PI / 6]}>
         <ShapeOrbit
           focal={[0, 0, 0]}
           count={backEnd.length}
@@ -102,7 +100,7 @@ function SkillsOrbit(props) {
         />
       </group>
       {/* Middle Orbit */}
-      <group {...props} ref={frontRef}>
+      <group ref={frontRef}>
         <ShapeOrbit
           focal={[0, 0, 0]}
           count={frontEnd.length}
@@ -114,7 +112,7 @@ function SkillsOrbit(props) {
       </group>
 
       {/* Inner Orbit */}
-      <group {...props} ref={toolRef} rotation={[-Math.PI / 3, Math.PI / 6, 0]}>
+      <group ref={toolRef} rotation={[-Math.PI / 3, Math.PI / 6, 0]}>
         <ShapeOrbit
           focal={[0, 0, 0]}
           count={tools.length}
@@ -139,7 +137,7 @@ function SkillsOrbit(props) {
           />
         </mesh>
       </group>
-    </>
+    </group>
   );
 }
 
@@ -165,4 +163,4 @@ function ShapeOrbit(props) {
   return <group rotation={[tilt, 0, invert]}>{shapes}</group>;
 }
 
-export default SkillsOrbit;
+export default SkillScene;

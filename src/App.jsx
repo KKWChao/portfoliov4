@@ -5,19 +5,21 @@ import { Loader } from "@react-three/drei";
 import { useEffect, useState } from "react";
 
 import About from "@/scenes/About";
+import Home from "@/scenes/Home";
 import Projects from "@/scenes/Projects";
 import Contact from "@/scenes/Contact";
 import Skills from "@/scenes/Skills";
+import Menu from "@/components/Menu";
 
-import StarsAnimated from "@/components/Fiber/StarsAnimated";
-import Lighting from "@/components/Fiber/Lighting";
-import MainCity from "@/components/Fiber/MainCity";
-import Home from "@/scenes/Home";
-import ScrollManager from "./components/Reusable/ScrollManager";
-import Menu from "./components/Menu";
-import Planets from "./components/Fiber/Planets";
-import SkillsOrbit from "./components/Fiber/SkillsOrbit";
-import SkillBox from "./components/Fiber/Skybox/SkillBox";
+import StarsAnimated from "@/components/Fiber/starsAnimated";
+import Lighting from "@/components/Fiber/lighting";
+import ScrollManager from "@/components/Reusable/ScrollManager";
+
+import HomeBox from "./components/Fiber/Skybox/homeBox";
+import AboutScene from "@/components/Fiber/scenes/aboutScene";
+import SkillScene from "@/components/Fiber/scenes/skillsScene";
+import ProjectScene from "./components/Fiber/scenes/projectScene";
+
 function App() {
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
@@ -28,23 +30,20 @@ function App() {
 
   return (
     <>
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loader />}>
         <Canvas id="canvas" style={{ position: "fixed" }}>
           <color attach="background" args={["#000000"]} />
           <ScrollControls pages={5} damping={0.1}>
             <Lighting />
             <StarsAnimated />
+            {/* <OrbitControls /> */}
+
             <Scroll>
-              {/* <SoftShadows /> */}
               {/* page items */}
-              {/* <Sparkles position={[0, 0, 0]} scale={15} size={10} noise={3} /> */}
-              {/* <TestSquare position={[0, 0, 0]} /> */}
-              <SkillBox position={[0, 0, 3]} height={7} depth={7} width={7} />
-
-              <Planets position={[0, -7, 0]} />
-
-              <SkillsOrbit position={[0, -23, 0]} />
-              {/* <MainCity position={[0, -80, 0]} /> */}
+              <HomeBox />
+              <AboutScene />
+              <ProjectScene />
+              <SkillScene />
             </Scroll>
 
             <Scroll html id="pages">
