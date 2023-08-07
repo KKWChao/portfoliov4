@@ -30,9 +30,9 @@ function Skills() {
     <Section id="skills" className="">
       <h1 className="text-5xl py-10 title">Skills</h1>
       <div className="flex justify-center m-4">
-        <div className="grid grid-cols-2 md:gap-10 gap-1">
-          <h2 className="md:text-5xl text-2xl font-semibold">FrontEnd</h2>
-          <h2 className="md:text-5xl text-2xl font-semibold">Backend</h2>
+        <div className="grid grid-cols-2 md:gap-10 gap-1  bg-black bg-opacity-70 rounded-lg p-2">
+          <h2 className="md:text-4xl text-2xl font-semibold">FrontEnd</h2>
+          <h2 className="md:text-4xl text-2xl font-semibold">Backend</h2>
           <div>
             {skillList.frontEndSkills.map((item, idx) => (
               <motion.p
@@ -41,7 +41,7 @@ function Skills() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: idx, type: "spring" }}
-                className="text-2xl"
+                className="text-2xl p-1"
               >
                 {item}
               </motion.p>
@@ -55,7 +55,7 @@ function Skills() {
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: idx, type: "spring" }}
-                className="text-2xl"
+                className="text-2xl p-1 "
               >
                 {item}
               </motion.p>

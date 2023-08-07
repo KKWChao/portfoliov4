@@ -11,6 +11,7 @@ module.exports = {
     fontFamily: {
       // dmsans: ["DM Sans", "sans-serif"]
       "Press+Start+2P": ["Press Start 2P"],
+      "Chakra+Petch": ["Chakra Petch"],
       Poppins: ["Poppins", "sans-serif"],
     },
     backgroundImage: {
