@@ -21,14 +21,14 @@ function About() {
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 3 }}
         >
-          <p className="lg:text-2xl lg:w-1/2 text-md md:px-10 px-2 md:text-2xl md:w-3/4 mt-10 bg-black rounded-lg bg-opacity-60 hover:opacity-20 ease-in-out duration-300">
-            I am an experienced web developer with a strong background in
-            building websites and projects. With a focus on JavaScript,
-            HTML/CSS, and Bootstrap, I am dedicated to creating exceptional user
-            experiences that captivate visitors and drive tangible business
-            outcomes. I possess a deep understanding of JavaScript, allowing me
-            to develop elegant and scalable front-end solutions using modern
-            frameworks such as React and Vue.js. <br />
+          <p className="lg:text-2xl lg:w-1/2 text-md md:px-10 px-2 md:text-2xl md:w-3/4 mt-10 bg-black rounded-lg bg-opacity-60 hover:opacity-60 ease-in-out duration-300">
+            I am a web developer with a strong background in building websites
+            and projects. With a focus on JavaScript, HTML/CSS, and React, I am
+            dedicated to creating exceptional user experiences that captivate
+            visitors and drive tangible business outcomes. I possess a deep
+            understanding of JavaScript, allowing me to develop elegant and
+            scalable front-end solutions using modern frameworks such as React
+            and Next.JS. <br />
             <br />
             In my previous work, I have seamlessly integrated front-end
             frameworks with back-end technologies like Express.js and MongoDB,

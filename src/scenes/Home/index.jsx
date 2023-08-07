@@ -5,10 +5,10 @@ function Home() {
   return (
     <Section id="home" className="">
       <div className="relative h-screen flex flex-col justify-center">
-        <h1 className="title md:text-7xl text-3xl">
+        <h1 className="title md:text-6xl text-3xl">
           Hi, My name is Kelvin Chao
         </h1>
-        <h1 className="title text-xl">Web Developer</h1>
+        <h1 className="title text-xl pt-10">Full Stack Engineer</h1>
         <div className="absolute bottom-0 w-full">
           <h3 className="flex flex-col items-center">
             Scroll Down for More Info!

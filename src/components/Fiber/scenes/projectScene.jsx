@@ -3,7 +3,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { animate, useMotionValue } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import { atom, useAtom } from "jotai";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const projects = [
   {
@@ -39,8 +39,7 @@ export const projects = [
     projectDescription:
       "Experience the YouTube Clone, a dynamic web application developed with React, JavaScript, and Material-UI (MUI). Explore a vast library of videos, search for your favorite content, and enjoy an immersive viewing experience. This clone emulates the popular video-sharing platform, providing a seamless interface for discovering and watching videos.",
     githubLink: "https://github.com/KKWChao/YoutubeClone",
-    projectLink:
-      "https://632a22c204beb617c6d1078a--meek-marzipan-6344b2.netlify.app/",
+    projectLink: "https://kcyoutubeclone.netlify.app/",
     technologies: ["React", "MUI", "API"],
   },
 
@@ -59,7 +58,7 @@ export const projects = [
     imageSrc: "./assets/images/ProjectImage5.png",
     projectName: "Sociopedia",
     projectDescription:
-      "A social media site to show the world your personality. ",
+      "A social media site to show the world your personality. [Work in Progress...] ",
     projectLink: "",
     githubLink: "https://github.com/KKWChao/FullstackSite",
     technologies: ["MongoDB", "React", "Node.js", "MUI"],
@@ -94,9 +93,14 @@ function ProjectScene() {
 
 function Project(props) {
   const { project, highlighted } = props;
+  const [hovered, setHovered] = useState(false);
 
   const background = useRef();
   const bgOpacity = useMotionValue(0.4);
+
+  useEffect(() => {
+    document.body.style.cursor = hovered ? "pointer" : "auto";
+  }, [hovered]);
 
   useEffect(() => {
     animate(bgOpacity, highlighted ? 0.7 : 0.4);
@@ -118,6 +122,8 @@ function Project(props) {
         toneMapped={false}
         position={[0, 1.4, 0]}
         onClick={() => window.open(project.projectLink)}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
       />
       <Text
         maxWidth={3}
@@ -137,12 +143,30 @@ function Project(props) {
       >
         {project.projectDescription}
       </Text>
-      <Text
+      <Image
         maxWidth={1}
         anchorY={"bottom"}
         fontSize={0.15}
-        position={[0, -2.3, 0]}
-      ></Text>
+        url={"/src/assets/images/icons8-site-100.png"}
+        scale={0.3}
+        transparent
+        position={[0.5, -2.25, 0.01]}
+        onClick={() => window.open(project.projectLink)}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      />
+      <Image
+        maxWidth={1}
+        anchorY={"bottom"}
+        fontSize={0.15}
+        url={"/src/assets/images/github-mark-white.png"}
+        scale={0.3}
+        transparent
+        position={[-0.5, -2.25, 0.01]}
+        onClick={() => window.open(project.githubLink)}
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      />
     </group>
   );
 }
