@@ -1,4 +1,4 @@
-import StarsAnimated from "@/components/Fiber/starsAnimated";
+import StarsAnimated from "./starsAnimated";
 
 function Lighting() {
   return (

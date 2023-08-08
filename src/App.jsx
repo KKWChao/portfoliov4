@@ -9,14 +9,15 @@ import Contact from "@/scenes/Contact";
 import Skills from "@/scenes/Skills";
 import Menu from "@/components/Menu";
 
-import Lighting from "@/components/Fiber/lighting";
-import ScrollManager from "@/components/Reusable/ScrollManager";
+import Lighting from "./components/Fiber/Lighting.jsx";
 
-import HomeBox from "@/components/Fiber/Skybox/homeBox";
-import AboutScene from "@/components/Fiber/scenes/aboutScene";
-import SkillScene from "@/components/Fiber/scenes/skillsScene";
-import ProjectScene from "@/components/Fiber/scenes/projectScene";
-import ContactScene from "@/components/Fiber/scenes/contactScene";
+import ScrollManager from "./components/Reusable/ScrollManager";
+
+import HomeBox from "./components/Fiber/Skybox/homeBox";
+import AboutScene from "./components/Fiber/scenes/aboutScene";
+import SkillScene from "./components/Fiber/scenes/skillsScene";
+import ProjectScene from "./components/Fiber/scenes/projectScene";
+import ContactScene from "./components/Fiber/scenes/contactScene";
 
 function App() {
   const [section, setSection] = useState(0);
