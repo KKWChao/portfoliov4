@@ -1,4 +1,5 @@
-import Section from "../../components/Reusable/Section";
+import Section from "@/components/Reusable/Section.jsx";
+
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 
 function Home() {

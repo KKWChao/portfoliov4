@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
-import Section from "../../components/Reusable/Section";
-import Footer from "../../components/Footer";
+import Section from "@/components/Reusable/Section";
+import Footer from "@/components/Footer";
 
 function Contact() {
   const formStyle = "md:w-1/3 p-5 rounded-md opacity-90 text-black w-full";

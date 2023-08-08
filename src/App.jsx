@@ -1,6 +1,5 @@
 import { Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Loader } from "@react-three/drei";
 import { useEffect, useState } from "react";
 
 import About from "@/scenes/About";

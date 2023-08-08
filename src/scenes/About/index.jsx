@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Section from "../../components/Reusable/Section";
+import Section from "@/components/Reusable/Section";
 
 function About() {
   return (
