@@ -1,6 +1,5 @@
-import { OrbitControls, Scroll, ScrollControls } from "@react-three/drei";
+import { Scroll, ScrollControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
 import { Loader } from "@react-three/drei";
 import { useEffect, useState } from "react";
 
@@ -15,11 +14,11 @@ import StarsAnimated from "@/components/Fiber/starsAnimated";
 import Lighting from "@/components/Fiber/lighting";
 import ScrollManager from "@/components/Reusable/ScrollManager";
 
-import HomeBox from "./components/Fiber/Skybox/homeBox";
+import HomeBox from "@/components/Fiber/Skybox/homeBox";
 import AboutScene from "@/components/Fiber/scenes/aboutScene";
 import SkillScene from "@/components/Fiber/scenes/skillsScene";
-import ProjectScene from "./components/Fiber/scenes/projectScene";
-import ContactScene from "./components/Fiber/scenes/contactScene";
+import ProjectScene from "@/components/Fiber/scenes/projectScene";
+import ContactScene from "@/components/Fiber/scenes/contactScene";
 
 function App() {
   const [section, setSection] = useState(0);
@@ -49,7 +48,6 @@ function App() {
           </Scroll>
 
           <Scroll html id="pages">
-            <Loader />
             <ScrollManager section={section} onSectionChange={setSection} />
             <Home />
             <About />
