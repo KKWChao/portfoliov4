@@ -19,6 +19,7 @@ import HomeBox from "./components/Fiber/Skybox/homeBox";
 import AboutScene from "@/components/Fiber/scenes/aboutScene";
 import SkillScene from "@/components/Fiber/scenes/skillsScene";
 import ProjectScene from "./components/Fiber/scenes/projectScene";
+import ContactScene from "./components/Fiber/scenes/contactScene";
 
 function App() {
   const [section, setSection] = useState(0);
@@ -40,11 +41,11 @@ function App() {
 
           <Scroll>
             {/* page items */}
-
             <HomeBox />
             <AboutScene />
             <ProjectScene />
             <SkillScene />
+            <ContactScene />
           </Scroll>
 
           <Scroll html id="pages">
