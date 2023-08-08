@@ -9,7 +9,6 @@ import Contact from "@/scenes/Contact";
 import Skills from "@/scenes/Skills";
 import Menu from "@/components/Menu";
 
-import StarsAnimated from "@/components/Fiber/starsAnimated";
 import Lighting from "@/components/Fiber/lighting";
 import ScrollManager from "@/components/Reusable/ScrollManager";
 
@@ -34,7 +33,6 @@ function App() {
 
         <ScrollControls pages={5} damping={0.1}>
           <Lighting />
-          <StarsAnimated />
           {/* <OrbitControls /> */}
 
           <Scroll>

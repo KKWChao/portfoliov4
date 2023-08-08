@@ -1,3 +1,5 @@
+import StarsAnimated from "@/components/Fiber/starsAnimated";
+
 function Lighting() {
   return (
     <>
@@ -9,6 +11,8 @@ function Lighting() {
       >
         <orthographicCamera attach="shadow-camera" args={[-10, 10, 10, -10]} />
       </directionalLight>
+      <StarsAnimated />
+
       {/* <ambientLight /> */}
     </>
   );
