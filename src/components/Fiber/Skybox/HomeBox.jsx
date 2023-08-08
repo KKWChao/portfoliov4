@@ -1,4 +1,4 @@
-import { OrbitControls, Stars, useTexture } from "@react-three/drei";
+import { useTexture } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
